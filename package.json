@@ -1,0 +1,15 @@
+{
+  "name": "vitepress-docs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Jinyang79 <827126732@qq.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "vitepress": "^0.15.5"
+  },
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
+  }
+}
