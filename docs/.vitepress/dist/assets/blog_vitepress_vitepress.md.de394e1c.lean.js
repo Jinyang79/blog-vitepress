@@ -1,0 +1,1 @@
+import{o as t,c as e}from"./app.84cf0021.js";const r='{"title":"","description":"","frontmatter":{},"relativePath":"blog/vitepress/vitepress.md","lastUpdated":1624806134094}',o={};o.render=function(r,o,s,a,i,p){return t(),e("div")};export default o;export{r as __pageData};
