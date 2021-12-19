@@ -1,25 +1,23 @@
 #!/usr/bin/env sh
 
-# abort on errors
+# 确保脚本抛出遇到的错误
 set -e
 
-# build
-npm run docs:build
+# 本地打包
+yarn build
 
-# navigate into the build output directory
+# 导航到构建输出目录
 cd docs/.vitepress/dist
 
 # if you are deploying to a custom domain
 # echo 'www.example.com' > CNAME
 
+# 提交
 git init
 git add -A
-git commit -m 'deploy'
+git commit -m '🚀 部署至 Jinyang79.github.io'
 
-# if you are deploying to https://<USERNAME>.github.io
+# 推送至 https://github.com/Jinyang79/Jinyang79.github.io
 git push -f https://github.com/Jinyang79/Jinyang79.github.io.git master
-
-# if you are deploying to https://<USERNAME>.github.io/<REPO>
-# git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
 
 cd -
