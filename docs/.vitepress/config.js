@@ -1,5 +1,5 @@
 module.exports = {
-  title: "Blog",
+  title: "Jinyang's Blog",
   themeConfig: {
     nav: [{
         text: "Home",
@@ -15,11 +15,11 @@ module.exports = {
       },
     ],
     sidebar: [{
-        text: 'Vite',
+        text: 'React Vite 迁移指南',
         link: '/blog/vite/vite'
       },
       {
-        text: 'VitePress',
+        text: 'VitePress 使用',
         link: '/blog/VitePress/VitePress'
       }
     ],
