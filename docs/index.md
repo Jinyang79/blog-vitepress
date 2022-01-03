@@ -1,6 +1,6 @@
 # hello
-Hi 👋 我是瑾阳，20届毕业，目前在上海，从事前端开发工作，这里是我记录总结知识的地方。
 
+Hi 👋 我是瑾阳，20 届毕业，目前在上海，从事前端开发工作，这里是我积累知识的地方。如果有如何错误或建议请在 [issues](https://github.com/Jinyang79/blog-vitepress/issues) 提出。
 
 大学的时候有使用过 [hexo + icarus](https://jinyang79.github.io/blog-hexo-icarus/) 搭建博客，记录学习笔记，工作后，因为一些原因就停止更新了。
 
