@@ -1,14 +1,14 @@
-# React 项目中使用 cdn 引入 js
+# 在 React 项目中引入 CDN
 
 ## 问题
 
-我在项目中需要将`json`文件和`xlsx`文件相互转化，所以使用第三方库 [SheetJS](https://github.com/SheetJS/sheetjs) 来实现需求，但是项目一开始使用`npm`安装`xlsx`，通过`webpack-bundle-analyzer`分析，`xlsx`打包后的产物相对来说非常大（如下图）。
+我在项目中需要将`json`文件和`xlsx`文件相互转化，所以使用第三方库 [SheetJS](https://github.com/SheetJS/sheetjs) 来实现需求，但是项目一开始使用`npm`安装`xlsx`，通过`webpack-bundle-analyzer`分析，`xlsx`打包后的产物相对较大（如下图）。
 
 ![image-20211227174544242](https://gitee.com/jinyang7/blog-image/raw/master/img/202112271745477.png)
 
 ## 方案
 
-目的是为了减小项目`webpack`打包后的产物 size，并且又不影响我们在项目中通过`ESM`导入的方式使用，那就可以通过配置 [webpack externals](https://www.webpackjs.com/configuration/externals/) 来满足我们的需求。
+为了减小项目`webpack`打包后产物的 size，因此选择以`CDN`的方式引入`xlsx`，**并且不能影响我们在项目中通过`ESM`导入的方式使用**，所以通过配置 [webpack externals](https://www.webpackjs.com/configuration/externals/) 来实现我们的需求。
 
 **index.html**
 

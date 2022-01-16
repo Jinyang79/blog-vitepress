@@ -28,16 +28,20 @@ module.exports = {
         link: '/blog/antd-upgrade-log'
       },
       {
-        text: '更优雅的 js 代码',
+        text: '更优雅的 JS 代码',
         link: '/blog/elegant-js-code'
       },
       {
-        text: 'vscode 个人使用插件',
+        text: 'VSCode 个人使用插件',
         link: '/blog/vscode-plugins'
       },
       {
-        text: 'React 项目中使用 cdn 引入 js',
+        text: '在 React 项目中引入 CDN',
         link: '/blog/cdn-in-react'
+      },
+      {
+        text: '基于 SheetJs 实现前端导入导出',
+        link: '/blog/util-xlsx'
       },
     ],
 
