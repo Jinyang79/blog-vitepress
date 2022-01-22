@@ -9,6 +9,7 @@
   },
   "scripts": {
     "deploy": "bash deploy.sh",
+    "redeploy": "bash redeploy.sh",
     "dev": "vitepress dev docs",
     "build": "vitepress build docs",
     "serve": "vitepress serve docs"

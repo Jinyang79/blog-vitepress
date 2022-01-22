@@ -87,7 +87,7 @@ export function jsonToXlsx(
 
 #### 使用
 
-```ts
+```tsx
 // 请求获取 result
 const { result } = api
 
@@ -107,7 +107,7 @@ jsonToXlsx({
 思路：基于 antd 的 Upload 获取 file 对象，通过`sheet_to_json`将工作表转换为 JS 对象数组
 
 1. 封装 xlsxToJson 方法，调用`sheet_to_json` 等 api，得到表格数据（data）；
-2. 封装 CustomUpload 组件，通过 Upload 的 `beforeUpload`或`customRequest` api 获取 file 对象；
+2. 封装 CustomUpload 组件，通过 Upload 的 `customRequest` api 获取 file 对象；
 
 #### xlsxToJson.ts
 
@@ -191,8 +191,8 @@ interface CustomUploadProps {
  *     onSuccess
  *   }
  * @returns {*}  {JSX.Element}
- * @tips 通过 antd Upload 获取 file 对象，然后通过 xlsxToJson
- *       beforeUpload 和 customRequest 均可实现获取 file 对象
+ * @tips 通过 antd Upload 获取 file 对象，然后通过 xlsxToJson;
+ *       使用 Upload customRequest api 获取 file 对象;
  */
 const CustomUpload = ({
   uploadBtnName,
@@ -202,18 +202,12 @@ const CustomUpload = ({
     <Upload
       accept=".xlsx, .xls"
       showUploadList={false}
-      beforeUpload={(file) => {
+      customRequest={({ file }) => {
         xlsxToJson({
-          file,
-          onSuccess,
-        });
+          file: file as File,
+          onSuccess
+        })
       }}
-      // customRequest={({ file }) => {
-      //   xlsxToJson({
-      //     file: file as File,
-      //     onSuccess
-      //   })
-      // }}
     >
       <Button icon={<UploadOutlined />}>{uploadBtnName}</Button>
     </Upload>

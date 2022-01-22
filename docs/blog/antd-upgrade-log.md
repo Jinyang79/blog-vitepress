@@ -24,7 +24,7 @@ antd4-codemod src
 需要注意的两点是：
 
 - **antd v4 版本的样式相对于 v3 有部分改动，如果在项目中修改过 antd 样式，要记得调整过来。**
-- **升级工具会帮你迁移到 antd v4，废弃的组件会通过 `@ant-design/compatible` 这个包引入并保持运行，不会影响组件使用，但是会在 dev server 抛出 waring，为了保持系统的整体性，还是建议手动迁移。**
+- **升级工具会帮你迁移到 antd v4，废弃的组件会通过 `@ant-design/compatible` 这个包引入并保持运行，不会影响组件使用，但是会在 dev server 抛出 warning，为了保持系统的整体性，还是建议手动迁移。**
 
 ## css 调整
 
