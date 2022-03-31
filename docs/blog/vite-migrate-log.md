@@ -1,6 +1,6 @@
 # React 项目 Vite 迁移记录
 
-![youxiaoyou](https://gitee.com/jinyang7/blog-image/raw/master/img/202201221849441.jpg)
+![youxiaoyou](https://raw.githubusercontent.com/Jinyangava/blog-image/master/img/202201221849441.jpg)
 
 ## 前言
 
@@ -10,11 +10,11 @@ Vite 2.0 正式版在 21 年春节就发布了，之前一直有在关注尤大�
 
 通过 webpack 启动，**大概在  45s 左右**。
 
-![dev by webpack](https://gitee.com/jinyang7/blog-image/raw/master/img/202112261817225.gif)
+![dev by webpack](https://raw.githubusercontent.com/Jinyangava/blog-image/master/img/202112261817225.gif)
 
 通过 Vite 启动，**时间大概在  1.2s！！！** 😱
 
-![dev by Vite](https://gitee.com/jinyang7/blog-image/raw/master/img/202112261817609.gif)
+![dev by Vite](https://raw.githubusercontent.com/Jinyangava/blog-image/master/img/202112261817609.gif)
 
 
 
@@ -24,7 +24,7 @@ Vite 2.0 正式版在 21 年春节就发布了，之前一直有在关注尤大�
 
 1.项目经过 eject 后会暴露配置，移除 `config` `scripts` 目录。
 
-![image-20210626181607914](https://gitee.com/jinyang7/blog-image/raw/master/img/202112261749441.png)![image-20210626183201556](https://gitee.com/jinyang7/blog-image/raw/master/img/202112261749403.png)
+![image-20210626181607914](https://raw.githubusercontent.com/Jinyangava/blog-image/master/img/202112261749441.png)![image-20210626183201556](https://raw.githubusercontent.com/Jinyangava/blog-image/master/img/202112261749403.png)
 
 2.移除所有 webpack 相关依赖（webpack, xxx-loader, xxx-webpack-plugin，babel-xxx，postcss-xxx）
 
@@ -98,7 +98,7 @@ export default defineConfig({
 yarn start
 ```
 
-![image-20210630180546833](https://gitee.com/jinyang7/blog-image/raw/master/img/202112261749614.png)![image-20210630180708132](https://gitee.com/jinyang7/blog-image/raw/master/img/202112261749274.png)
+![image-20210630180546833](https://raw.githubusercontent.com/Jinyangava/blog-image/master/img/202112261749614.png)![image-20210630180708132](https://raw.githubusercontent.com/Jinyangava/blog-image/master/img/202112261749274.png)
 
 项目正常启动了，控制台抛出一大堆错误，无法显示页面，这时就**需要我们对项目的开发环境和生产环境做一些调整**，才能保证我们的项目正常运行。
 
@@ -215,7 +215,7 @@ export default defineConfig({
 
 ❌ error:
 
-![image-20210630181211545](https://gitee.com/jinyang7/blog-image/raw/master/img/202112261749773.png)
+![image-20210630181211545](https://raw.githubusercontent.com/Jinyangava/blog-image/master/img/202112261749773.png)
 
 🐛 Fix:
 
@@ -288,7 +288,7 @@ plugins: [
 
 ❌ error:
 
-![image-20210705135729627](https://gitee.com/jinyang7/blog-image/raw/master/img/202112261750088.png)
+![image-20210705135729627](https://raw.githubusercontent.com/Jinyangava/blog-image/master/img/202112261750088.png)
 
 🐛 Fix:
 
@@ -302,7 +302,7 @@ import qs from "query-string";
 
 ❌ error:
 
-![image-20210705144234355](https://gitee.com/jinyang7/blog-image/raw/master/img/202112261750996.png)
+![image-20210705144234355](https://raw.githubusercontent.com/Jinyangava/blog-image/master/img/202112261750996.png)
 
 🐛 Fix:
 
@@ -361,7 +361,7 @@ VITE_APP_ENV=testing
 
 #### Cannot read property 'defineLocale' of undefined
 
-![image-20210708113519756](https://gitee.com/jinyang7/blog-image/raw/master/img/202112261750685.png)
+![image-20210708113519756](https://raw.githubusercontent.com/Jinyangava/blog-image/master/img/202112261750685.png)
 
 ```js
 --- import 'moment/locale/zh-cn'
@@ -370,7 +370,7 @@ VITE_APP_ENV=testing
 
 #### Failed to resolve module specifier "indexof"
 
-![image-20210708145138025](https://gitee.com/jinyang7/blog-image/raw/master/img/202112261750989.png)
+![image-20210708145138025](https://raw.githubusercontent.com/Jinyangava/blog-image/master/img/202112261750989.png)
 
 https://github.com/Vitejs/Vite/issues/2670
 

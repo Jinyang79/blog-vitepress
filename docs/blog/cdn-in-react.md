@@ -4,7 +4,7 @@
 
 我在项目中需要将`json`文件和`xlsx`文件相互转化，所以使用第三方库 [SheetJS](https://github.com/SheetJS/sheetjs) 来实现需求，但是项目一开始使用`npm`安装`xlsx`，通过`webpack-bundle-analyzer`分析，`xlsx`打包后的产物相对较大（如下图）。
 
-![image-20211227174544242](https://gitee.com/jinyang7/blog-image/raw/master/img/202112271745477.png)
+![image-20211227174544242](https://raw.githubusercontent.com/Jinyangava/blog-image/master/img/202112271745477.png)
 
 ## 方案
 
@@ -32,7 +32,7 @@ import XLSX from "xlsx";
 
 优化后，打包体积减少了约 300+ kb 如下图
 
-<img src="https://gitee.com/jinyang7/blog-image/raw/master/img/202112282025083.png" alt="image-20211228202507055" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/Jinyangava/blog-image/master/img/202112282025083.png" alt="image-20211228202507055" style="zoom:50%;" />
 
 ## 参考
 

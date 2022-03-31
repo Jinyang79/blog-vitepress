@@ -17,7 +17,7 @@ antd4-codemod src
 
 ```
 
-![image-20210506144156350](https://gitee.com/jinyang7/blog-image/raw/master/img/202112261723071.png)
+![image-20210506144156350](https://raw.githubusercontent.com/Jinyangava/blog-image/master/img/202112261723071.png)
 
 升级完这些依赖项后，**工具自动升级就完成啦 🎉。**
 
@@ -34,11 +34,11 @@ antd4-codemod src
 
 3.x
 
-![image-20210701135747119](https://gitee.com/jinyang7/blog-image/raw/master/img/202112261723880.png)
+![image-20210701135747119](https://raw.githubusercontent.com/Jinyangava/blog-image/master/img/202112261723880.png)
 
 4.x
 
-![image-20210701135846263](https://gitee.com/jinyang7/blog-image/raw/master/img/202112261723746.png)
+![image-20210701135846263](https://raw.githubusercontent.com/Jinyangava/blog-image/master/img/202112261723746.png)
 
 ```css
 --- i.trigger {
@@ -69,7 +69,7 @@ showSizeChanger={false}
 
 ### Icon
 
-![image-20210629151020576](https://gitee.com/jinyang7/blog-image/raw/master/img/202112261723211.png)
+![image-20210629151020576](https://raw.githubusercontent.com/Jinyangava/blog-image/master/img/202112261723211.png)
 
 项目中使用了 `<Icon type={type} />` 会转化成 `<LegacyIcon type={type} />`
 
@@ -89,11 +89,11 @@ import { LaptopOutlined } from "@ant-design/icons";
 
 修改前
 
-![image-20210701160319352](https://gitee.com/jinyang7/blog-image/raw/master/img/202112261723655.png)
+![image-20210701160319352](https://raw.githubusercontent.com/Jinyangava/blog-image/master/img/202112261723655.png)
 
 修改后
 
-![image-20210701160621081](https://gitee.com/jinyang7/blog-image/raw/master/img/202112261723724.png)
+![image-20210701160621081](https://raw.githubusercontent.com/Jinyangava/blog-image/master/img/202112261723724.png)
 
 | Status | Size    | Size gzip |
 | ------ | ------- | --------- |
@@ -102,7 +102,7 @@ import { LaptopOutlined } from "@ant-design/icons";
 
 ### Form
 
-![image-20210629150959227](https://gitee.com/jinyang7/blog-image/raw/master/img/202112261723440.png)
+![image-20210629150959227](https://raw.githubusercontent.com/Jinyangava/blog-image/master/img/202112261723440.png)
 
 ```js
 import { Form } from "@ant-design/compatible";
@@ -110,7 +110,7 @@ import { Form } from "@ant-design/compatible";
 
 ### Select
 
-![image-20210629151114045](https://gitee.com/jinyang7/blog-image/raw/master/img/202112261723054.png)
+![image-20210629151114045](https://raw.githubusercontent.com/Jinyangava/blog-image/master/img/202112261723054.png)
 
 #### 3.x
 
@@ -127,13 +127,13 @@ const type = option.props.type;
 
 option 返回的是 Option 实例
 
-![image-20210702181326512](https://gitee.com/jinyang7/blog-image/raw/master/img/202112261723688.png)
+![image-20210702181326512](https://raw.githubusercontent.com/Jinyangava/blog-image/master/img/202112261723688.png)
 
 #### 4.x
 
 返回类型是 option 而不是 Option 实例。请直接读取值，而不是从“props”。
 
-![image-20210702181721310](https://gitee.com/jinyang7/blog-image/raw/master/img/202112261724636.png)
+![image-20210702181721310](https://raw.githubusercontent.com/Jinyangava/blog-image/master/img/202112261724636.png)
 
 ```js
 const type = option.type;
@@ -168,13 +168,13 @@ module.exports = {
 
 修改前
 
-![image-20210702180214217](https://gitee.com/jinyang7/blog-image/raw/master/img/202112261724556.png)
+![image-20210702180214217](https://raw.githubusercontent.com/Jinyangava/blog-image/master/img/202112261724556.png)
 
-![image-20210702180234709](https://gitee.com/jinyang7/blog-image/raw/master/img/202112261724060.png)
+![image-20210702180234709](https://raw.githubusercontent.com/Jinyangava/blog-image/master/img/202112261724060.png)
 
 修改后
 
-![image-20210702175606863](https://gitee.com/jinyang7/blog-image/raw/master/img/202112261724290.png)
+![image-20210702175606863](https://raw.githubusercontent.com/Jinyangava/blog-image/master/img/202112261724290.png)
 
 | Status | Size    | Size gzip |
 | ------ | ------- | --------- |
