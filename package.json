@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "Jinyang79 <827126732@qq.com>",
+  "type": "module",
   "license": "MIT",
   "devDependencies": {
-    "vitepress": "^0.15.5"
+    "vitepress": "^1.0.0-alpha.45"
   },
   "scripts": {
     "deploy": "bash deploy.sh",
