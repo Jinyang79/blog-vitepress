@@ -1,6 +1,4 @@
-# 更优雅的 JS 代码
-
-持续更新中...
+# Code Style
 
 ## 变量命名
 
@@ -99,33 +97,33 @@ a ?? doSomething();
 ```js
 // if else
 if (status == 1) {
-  console.log("processing");
+  console.log('processing');
 } else if (status == 2) {
-  console.log("fail");
+  console.log('fail');
 } else if (status == 3) {
-  console.log("success");
+  console.log('success');
 } else if (status == 4) {
-  console.log("cancel");
+  console.log('cancel');
 } else {
-  console.log("other");
+  console.log('other');
 }
 
 // switch case
 switch (status) {
   case 1:
-    console.log("processing");
+    console.log('processing');
     break;
   case 2:
-    console.log("fail");
+    console.log('fail');
     break;
   case 3:
-    console.log("success");
+    console.log('success');
     break;
   case 4:
-    console.log("cancel");
+    console.log('cancel');
     break;
   default:
-    console.log("other");
+    console.log('other');
     break;
 }
 ```
@@ -134,11 +132,11 @@ switch (status) {
 
 ```js
 const actions = {
-  1: "processing",
-  2: "fail",
-  3: "success",
-  4: "cancel",
-  default: "other",
+  1: 'processing',
+  2: 'fail',
+  3: 'success',
+  4: 'cancel',
+  default: 'other',
 };
 
 console.log(actions[status] ?? actions.default);
@@ -209,7 +207,7 @@ function getUserInfo(name, age, sex, Address, phone) {
   //...
 }
 
-getUserInfo("小明", 24, "男", undefined, "1388888");
+getUserInfo('小明', 24, '男', undefined, '1388888');
 ```
 
 下面来使用对象传参：
@@ -221,8 +219,8 @@ function getUserInfo(args) {
 }
 
 getUserInfo({
-  phone: "1388888",
-  sex: "bananas",
+  phone: '1388888',
+  sex: 'bananas',
   age: 10,
   name: 1,
 });
