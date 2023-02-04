@@ -1,4 +1,6 @@
-import { defineConfig } from "vitepress";
+import {
+  defineConfig
+} from "vitepress";
 
 export default defineConfig({
   // lang: 'en-US',
@@ -8,7 +10,12 @@ export default defineConfig({
   lastUpdated: true,
   cleanUrls: true,
 
-  head: [["meta", { name: "theme-color", content: "#3c8772" }]],
+  head: [
+    ["meta", {
+      name: "theme-color",
+      content: "#3c8772"
+    }]
+  ],
 
   markdown: {
     headers: {
@@ -25,9 +32,10 @@ export default defineConfig({
       text: "Edit this page on GitHub",
     },
 
-    socialLinks: [
-      { icon: "github", link: "https://github.com/vuejs/vitepress" },
-    ],
+    socialLinks: [{
+      icon: "github",
+      link: "https://github.com/vuejs/vitepress"
+    }, ],
 
     footer: {
       message: "Released under the MIT License.",
@@ -48,8 +56,7 @@ export default defineConfig({
 });
 
 function nav() {
-  return [
-    {
+  return [{
       text: "Home",
       link: "/",
     },
@@ -65,12 +72,10 @@ function nav() {
 }
 
 function sidebarGuide() {
-  return [
-    {
+  return [{
       text: "react",
       collapsed: false,
-      items: [
-        {
+      items: [{
           text: "更优雅的 JS 代码",
           link: "/blog/elegant-js-code",
         },
@@ -111,15 +116,24 @@ function sidebarGuide() {
 }
 
 function sidebarConfig() {
-  return [
-    {
-      text: "Config",
-      items: [
-        { text: "Introduction", link: "/config/introduction" },
-        { text: "App Configs", link: "/config/app-configs" },
-        { text: "Theme Configs", link: "/config/theme-configs" },
-        { text: "Frontmatter Configs", link: "/config/frontmatter-configs" },
-      ],
-    },
-  ];
+  return [{
+    text: "Config",
+    items: [{
+        text: "Introduction",
+        link: "/config/introduction"
+      },
+      {
+        text: "App Configs",
+        link: "/config/app-configs"
+      },
+      {
+        text: "Theme Configs",
+        link: "/config/theme-configs"
+      },
+      {
+        text: "Frontmatter Configs",
+        link: "/config/frontmatter-configs"
+      },
+    ],
+  }, ];
 }

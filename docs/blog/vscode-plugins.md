@@ -1,7 +1,5 @@
 # vscode 个人使用插件
 
-会了吧
-
 Beautify
 
 Code Runner 直接运行代码
@@ -21,8 +19,6 @@ Git History Git 历史记录
 GitHub Theme
 
 GitLens — Git supercharged 代码光标行显示 git 记录
-
-go-home 下班提醒小助手
 
 indent-rainbow 缩进彩虹
 
