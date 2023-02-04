@@ -74,7 +74,7 @@ showSizeChanger={false}
 项目中使用了 `<Icon type={type} />` 会转化成 `<LegacyIcon type={type} />`
 
 ```js
-import { Icon as LegacyIcon } from "@ant-design/compatible";
+import { Icon as LegacyIcon } from '@ant-design/compatible';
 
 // <LegacyIcon type={type} />
 ```
@@ -84,7 +84,7 @@ import { Icon as LegacyIcon } from "@ant-design/compatible";
 使用新版 `Icon` 按需引入的方式
 
 ```js
-import { LaptopOutlined } from "@ant-design/icons";
+import { LaptopOutlined } from '@ant-design/icons';
 ```
 
 修改前
@@ -105,7 +105,7 @@ import { LaptopOutlined } from "@ant-design/icons";
 ![image-20210629150959227](https://raw.githubusercontent.com/Jinyangava/blog-image/master/img/202112261723440.png)
 
 ```js
-import { Form } from "@ant-design/compatible";
+import { Form } from '@ant-design/compatible';
 ```
 
 ### Select
@@ -149,8 +149,6 @@ const type = option.type;
 >
 > A：轻量化，大小仅 2KB，并且和 Moment.js API 保持一致，迁移成本低。
 
-
-
 官方提供了三种替换方案，我这里选择的是使用 [antd-dayjs-webpack-plugin](https://github.com/ant-design/antd-dayjs-webpack-plugin) 插件，因为它**无需对现有代码做任何修改**直接替换成 `Day.js`。
 
 ### webpack-config.js
@@ -160,9 +158,7 @@ const AntdDayjsWebpackPlugin = require('antd-dayjs-webpack-plugin');
 
 module.exports = {
   // ...
-  plugins: [
-    new AntdDayjsWebpackPlugin()
-  ]
+  plugins: [new AntdDayjsWebpackPlugin()],
 };
 ```
 

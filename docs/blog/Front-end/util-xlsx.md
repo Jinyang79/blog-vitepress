@@ -1,4 +1,4 @@
-# 基于 SheetJs 实现前端导入导出
+# 前端导入导出 by SheetJs
 
 ## 需求
 
@@ -22,8 +22,8 @@
 #### jsonToXlsx.ts
 
 ```ts
-import { message } from "antd";
-import XLSX from "xlsx";
+import { message } from 'antd';
+import XLSX from 'xlsx';
 
 interface JsonToXlsxProps {
   /**
@@ -52,13 +52,7 @@ interface JsonToXlsxProps {
  *   mapKeyToHeader
  * }
  */
-export function jsonToXlsx(
-  {
-    res,
-    fileName,
-    mapKeyToHeader,
-  }: JsonToXlsxProps
-): void {
+export function jsonToXlsx({ res, fileName, mapKeyToHeader }: JsonToXlsxProps): void {
   const headerMap = new Map<string, string>(mapKeyToHeader);
 
   const exportData = res.map((item) => {
@@ -89,15 +83,15 @@ export function jsonToXlsx(
 
 ```tsx
 // 请求获取 result
-const { result } = api
+const { result } = api;
 
 jsonToXlsx({
   res: result,
-  fileName: "员工信息",
+  fileName: '员工信息',
   mapKeyToHeader: [
-    ["name", "姓名"],
-    ["age", "年龄"],
-    ["address", "地址"],
+    ['name', '姓名'],
+    ['age', '年龄'],
+    ['address', '地址'],
   ],
 });
 ```
@@ -112,8 +106,8 @@ jsonToXlsx({
 #### xlsxToJson.ts
 
 ```ts
-import XLSX from "xlsx";
-import { message } from "antd";
+import XLSX from 'xlsx';
+import { message } from 'antd';
 
 interface XlsxToJsonProps {
   /**
@@ -147,7 +141,7 @@ export function xlsxToJson({ file, onSuccess }: XlsxToJsonProps): void {
     try {
       const result = event.target?.result;
 
-      const workbook = XLSX.read(result, { type: "binary" });
+      const workbook = XLSX.read(result, { type: 'binary' });
 
       for (const sheet in workbook.Sheets) {
         if (Object.prototype.hasOwnProperty.call(workbook.Sheets, sheet)) {
@@ -166,10 +160,10 @@ export function xlsxToJson({ file, onSuccess }: XlsxToJsonProps): void {
 #### CustomUpload.tsx
 
 ```tsx
-import React from "react";
-import { UploadOutlined } from "@ant-design/icons";
-import { Button, Upload } from "antd";
-import { xlsxToJson } from "utils/xlsx";
+import React from 'react';
+import { UploadOutlined } from '@ant-design/icons';
+import { Button, Upload } from 'antd';
+import { xlsxToJson } from 'utils/xlsx';
 
 interface CustomUploadProps {
   /**
@@ -194,19 +188,16 @@ interface CustomUploadProps {
  * @tips 通过 antd Upload 获取 file 对象，然后通过 xlsxToJson;
  *       使用 Upload customRequest api 获取 file 对象;
  */
-const CustomUpload = ({
-  uploadBtnName,
-  onSuccess,
-}: CustomUploadProps): JSX.Element => {
+const CustomUpload = ({ uploadBtnName, onSuccess }: CustomUploadProps): JSX.Element => {
   return (
     <Upload
-      accept=".xlsx, .xls"
+      accept='.xlsx, .xls'
       showUploadList={false}
       customRequest={({ file }) => {
         xlsxToJson({
           file: file as File,
-          onSuccess
-        })
+          onSuccess,
+        });
       }}
     >
       <Button icon={<UploadOutlined />}>{uploadBtnName}</Button>
@@ -222,7 +213,7 @@ export default CustomUpload;
 ```tsx
 return (
   <CustomUpload
-    uploadBtnName="上传员工信息"
+    uploadBtnName='上传员工信息'
     onSuccess={(data) => {
       console.log(data); // 表格的数据
       // 发起请求

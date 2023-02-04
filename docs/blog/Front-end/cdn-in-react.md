@@ -1,4 +1,4 @@
-# 在 React 项目中引入 CDN
+# React 项目中引入 CDN
 
 ## 问题
 
@@ -20,14 +20,14 @@
 
 ```js
 externals: {
-  xlsx: "XLSX";
+  xlsx: 'XLSX';
 }
 ```
 
 这样下面展示的代码就可以正常运行：
 
 ```js
-import XLSX from "xlsx";
+import XLSX from 'xlsx';
 ```
 
 优化后，打包体积减少了约 300+ kb 如下图

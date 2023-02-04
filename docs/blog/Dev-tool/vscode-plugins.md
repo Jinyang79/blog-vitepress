@@ -1,4 +1,4 @@
-# vscode 个人使用插件
+# VSCode Plugins
 
 Beautify
 
