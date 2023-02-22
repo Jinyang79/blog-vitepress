@@ -112,12 +112,16 @@ function sidebarGuide() {
       collapsed: false,
       items: [
         {
-          text: 'VSCode Plugins',
-          link: '/blog/Dev-tool/vscode-plugins',
+          text: 'Development Tools',
+          link: '/blog/Dev-tool/development-tools',
         },
         {
-          text: 'Prettier Plugins',
-          link: '/blog/Dev-tool/prettier-config',
+          text: 'Tampermonkey Script',
+          link: '/blog/Dev-tool/tampermonkey-script',
+        },
+        {
+          text: '远程唤醒连接 Mac',
+          link: '/blog/Dev-tool/remote-wake-mac',
         },
       ],
     },
