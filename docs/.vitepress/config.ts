@@ -103,7 +103,11 @@ function sidebarGuide() {
         },
         {
           text: 'React Hook - useRequest',
-          link: '/blog/Front-end/useRequest',
+          link: '/blog/Front-end/use-request',
+        },
+        {
+          text: 'Low-code 活动页平台实践',
+          link: '/blog/Front-end/low-code',
         },
       ],
     },

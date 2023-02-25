@@ -8,7 +8,7 @@
 
 下面标记的代码块就是数据请求编写的重复代码。
 
-![image-20220812212303141](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ab59a2cdaaff4da5a0926bc7f4f498a8~tplv-k3u1fbpfcp-zoom-1.image)
+<img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ab59a2cdaaff4da5a0926bc7f4f498a8~tplv-k3u1fbpfcp-zoom-1.image" alt="image-20220812212303141" width="70%" />
 
 简单概括为以下几类
 
@@ -36,26 +36,26 @@ ahooks 的 useRequest 已经非常成熟，可以直接引入使用，但也在�
 
 一开始的方案存在一些坑，经过不断的优化迭代，得到了本文最终的方案，仅供掘友参考。
 
-![BCBAA8AC-3BAB-4C2E-8C11-D2E93975C7D9](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/68b4938852844b4c8f2e6c33ddf2a51e~tplv-k3u1fbpfcp-zoom-1.image)
+<img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/68b4938852844b4c8f2e6c33ddf2a51e~tplv-k3u1fbpfcp-zoom-1.image" alt="BCBAA8AC-3BAB-4C2E-8C11-D2E93975C7D9" width="70%" />
 
 ## Hook 需求
 
-📌 首先我们要明确从 Hook 中获取什么
+🟢 首先我们要明确从 Hook 中获取什么
 
 - **data**：请求结果；
 - **loading**：用于表示正在请求数据；
 - **run**：触发函数；
 - **setData**：二次修改；（这个可以不需要返回）
-- **error**：错误信息；（👀 大部分实现方案会以 isError 状态的形式抛出， 😎 由于我的项目对于错误进行了单独的处理，这里就不需要了）
+- **error**：错误信息；（👀 大部分实现方案会以 isError 状态的形式抛出，由于我的项目对于错误进行了单独的处理，这里就不需要了）
 
-📌 其次是提取 Hook 公共逻辑
+🟢 其次是提取 Hook 公共逻辑
 
 - 接收异步请求函数
 - 请求成功后回调函数
 - 使用 try...catch 捕获错误
 - 根据接口的返回的 isSuccess 字段判断
 
-📌 最后使用 TS，类型推导
+🟢 最后使用 TS，类型推导
 
 ## Hook 技术方案
 
@@ -74,7 +74,7 @@ export async function apiSearch(params: SearchProps): Promise<ResponseProps<List
 }
 ```
 
-📌 封装异步请求函数，这样方便接口管理。
+🟢 封装异步请求函数，这样方便接口管理。
 
 ### 封装
 
@@ -160,13 +160,13 @@ export function useRequest<P = any, T = any>(
 }
 ```
 
-📌 使用泛型传递类型参数，方便类型推导。
+🟢 使用泛型传递类型参数，方便类型推导。
 
-📌 这里使用了两次 `setLoading(false)` ，在 `onSuccess` 之前使用是因为，项目存在一种业务情况，在“保存完成”后关闭 Modal，但是`hideModal()` 是通过 `onSuccess` 调用的，所以在 Modal 关闭之后，再去更新 state，控制台就会报 Warning， React 会提醒开发者不要在卸载的组件执行状态更新。
+🟢 这里使用了两次 `setLoading(false)` ，在 `onSuccess` 之前使用是因为，项目存在一种业务情况，在“保存完成”后关闭 Modal，但是`hideModal()` 是通过 `onSuccess` 调用的，所以在 Modal 关闭之后，再去更新 state，控制台就会报 Warning， React 会提醒开发者不要在卸载的组件执行状态更新。
 
-📌 上面有提到项目对错误信息有统一处理，所以不需要抛出 error。
+🟢 上面有提到项目对错误信息有统一处理，所以不需要抛出 error。
 
-📌 返回值是以对象的形式，当然也可以像 State Hook 一样以数组的形式返回。其实也就是解构赋值语法对于数组和对象的区别，这里个人使用习惯。
+🟢 返回值是以对象的形式，当然也可以像 State Hook 一样以数组的形式返回。其实也就是解构赋值语法对于数组和对象的区别，这里个人使用习惯。
 
 - 解构数组：必须按顺序获取值，直接命名；
 - 解构对象：必须使用返回对象对应的字段获取值，解构命名；
@@ -226,16 +226,8 @@ const onSave = () => {
 };
 ```
 
-📌 params ，result 都会有类型校验，这里也就体现出用 ts 的好处了。
+🟢 params ，result 都会有类型校验，这里也就体现出用 ts 的好处了。
 
 ## 总结
 
-大功告成 🎉 这样就可以 Hook 的方式去进行数据请求了。不用 CV 重复的代码，代码结构也更 **prettier** 😄。
-
-我认为 🧐 使用 Hook 熟练程度，在于 Custom Hook 玩的溜不溜，体现在对业务项目能够巧妙定制 Hook。
-
-还记得在最开始学习 Hook 的时候，看到大佬们自定义的 Hook 后发出，卧槽，原来是这么玩的 😆。目前社区已经有很多成熟的自定义 Hook 方案，比如 [react-use](https://github.com/streamich/react-use) 、[ahooks](https://ahooks.js.org/) 等等，大家有推荐的 Hook 开源库，也希望可以在评论区分享下，毕竟看优秀的代码也是学习的过程 🏃。
-
-这篇文章以我项目中自定义 Hook 的方案作为分享，有任何优化建议或者问题欢迎各位大佬评论区指出。
-
-如果本文的方案对你有些许帮助&启发，那就拜托点个赞吧 👍 🙇🏻🙇🏻🙇🏻
+大功告成，这样就可以通过 Hook 的方式去进行数据请求了，不需要 CV 重复的代码，代码结构也更 **prettier** ，这篇文章以我项目中自定义 Hook 的方案作为分享，有任何优化建议或者问题欢迎各位大佬评论区指出，如果本文的方案对你有些许帮助&启发，那就拜托点个赞吧 👍
