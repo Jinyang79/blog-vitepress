@@ -78,7 +78,7 @@ function nav() {
 function sidebarGuide() {
   return [
     {
-      text: 'Front-end',
+      text: 'Everyday',
       collapsed: false,
       items: [
         {
@@ -109,10 +109,14 @@ function sidebarGuide() {
           text: 'Low-code 活动页平台实践',
           link: '/blog/Front-end/low-code',
         },
+        {
+          text: 'React 中使用 SignalR',
+          link: '/blog/Front-end/signalr',
+        },
       ],
     },
     {
-      text: 'Dev-tool',
+      text: 'DevTools',
       collapsed: false,
       items: [
         {
@@ -130,7 +134,7 @@ function sidebarGuide() {
       ],
     },
     {
-      text: 'Code-life',
+      text: 'CodeLife',
       collapsed: false,
       items: [
         // { text: "Markdown", link: "/guide/markdown" },
