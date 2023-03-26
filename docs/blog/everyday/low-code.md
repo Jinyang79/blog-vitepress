@@ -1,8 +1,8 @@
-# 可视化活动页搭建平台
+# Low-code 活动页平台实践
 
 ## 前言
 
-低代码开发（Low-code）是指利用可视化的拖拽式开发环境和少量编程代码，快速构建应用程序的方法。
+低代码开发（`Low-code`）是指利用可视化的拖拽式开发环境和少量编程代码，快速构建应用程序的方法。
 
 主要优势：
 开发速度和提高开发人员的生产力。
@@ -17,11 +17,11 @@
 
 ## 需求
 
-通过可视化搭建活动页平台 拖拽生成完成后生成 HTML 文件直接使用，并且支持二次开发，让开发专注于业务逻辑的处理
+通过可视化搭建活动页平台 拖拽生成完成后生成 HTML 文件直接使用，并且支持二次开发，让开发专注于业务逻辑的处理。
 
 ## 实现
 
-[源码]()
+[源码](https://github.com/Jinyang79/low-code-h5) 搬运中...
 
 ### 功能点
 
@@ -41,3 +41,11 @@
 - [x] 支持埋点
 - [ ] 平台画布 UI 优化
 - [ ] ...
+
+## 参考
+
+https://juejin.cn/post/7101981953213071373
+
+https://www.zhangxinxu.com/wordpress/2017/07/js-text-string-download-as-html-json-file/
+
+https://github.com/woai3c/Front-end-articles/issues/19

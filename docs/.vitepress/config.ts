@@ -16,9 +16,17 @@ export default defineConfig({
         content: '#3c8772',
       },
     ],
+    [
+      'link',
+      {
+        rel: 'icon',
+        href: '/icon.ico',
+      },
+    ],
   ],
 
   markdown: {
+    theme: 'github-dark-dimmed',
     headers: {
       level: [0, 0],
     },
@@ -52,8 +60,7 @@ export default defineConfig({
     },
 
     // carbonAds: {
-    //   code: "CEBDT27Y",
-    //   placement: "vuejsorg",
+
     // },
   },
 });
@@ -78,59 +85,67 @@ function nav() {
 function sidebarGuide() {
   return [
     {
-      text: 'Front-end',
+      text: 'Everyday',
       collapsed: false,
       items: [
         {
           text: 'Code Style',
-          link: '/blog/Front-end/code-style',
+          link: '/blog/everyday/code-style',
         },
         {
           text: 'AntD 4.x 升级记录',
-          link: '/blog/Front-end/antd-upgrade-log',
+          link: '/blog/everyday/antd-upgrade-log',
         },
         {
           text: 'React 项目 Vite 迁移记录',
-          link: '/blog/Front-end/vite-migrate-log',
+          link: '/blog/everyday/vite-migrate-log',
         },
         {
           text: 'React 项目中引入 CDN',
-          link: '/blog/Front-end/cdn-in-react',
+          link: '/blog/everyday/cdn-in-react',
         },
         {
           text: '前端导入导出 by SheetJs',
-          link: '/blog/Front-end/util-xlsx',
+          link: '/blog/everyday/util-xlsx',
         },
         {
           text: 'React Hook - useRequest',
-          link: '/blog/Front-end/use-request',
+          link: '/blog/everyday/use-request',
         },
         {
           text: 'Low-code 活动页平台实践',
-          link: '/blog/Front-end/low-code',
+          link: '/blog/everyday/low-code',
+        },
+        {
+          text: 'React 中使用 SignalR',
+          link: '/blog/everyday/signalr',
+        },
+        {
+          text: 'Redux Toolkit 使用技巧',
+          link: '/blog/everyday/redux-toolkit',
         },
       ],
     },
     {
-      text: 'Dev-tool',
+      text: 'DevTools',
       collapsed: false,
       items: [
         {
           text: 'Development Tools',
-          link: '/blog/Dev-tool/development-tools',
+          link: '/blog/devtools/development-tools',
         },
         {
           text: 'Tampermonkey Script',
-          link: '/blog/Dev-tool/tampermonkey-script',
+          link: '/blog/devtools/tampermonkey-script',
         },
         {
           text: '远程唤醒连接 Mac',
-          link: '/blog/Dev-tool/remote-wake-mac',
+          link: '/blog/devtools/remote-wake-mac',
         },
       ],
     },
     {
-      text: 'Code-life',
+      text: 'CodeLife',
       collapsed: false,
       items: [
         // { text: "Markdown", link: "/guide/markdown" },
