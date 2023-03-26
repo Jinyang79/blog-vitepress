@@ -16,9 +16,17 @@ export default defineConfig({
         content: '#3c8772',
       },
     ],
+    [
+      'link',
+      {
+        rel: 'icon',
+        href: '/icon.ico',
+      },
+    ],
   ],
 
   markdown: {
+    theme: 'github-dark-dimmed',
     headers: {
       level: [0, 0],
     },
@@ -52,8 +60,7 @@ export default defineConfig({
     },
 
     // carbonAds: {
-    //   code: "CEBDT27Y",
-    //   placement: "vuejsorg",
+
     // },
   },
 });
@@ -112,6 +119,10 @@ function sidebarGuide() {
         {
           text: 'React 中使用 SignalR',
           link: '/blog/Front-end/signalr',
+        },
+        {
+          text: 'Redux Toolkit 使用技巧',
+          link: '/blog/Front-end/redux-toolkit',
         },
       ],
     },
