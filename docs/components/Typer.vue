@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { onMounted } from 'vue';
+
 const me = [
   '如果你事先知道自己将如何死去，你会以不同的方式过一生吗？ —— Cortana',
   '如果没有完成目标，做的这一切是否有意义?',
@@ -112,38 +114,40 @@ let currentTextIndex = 0;
 let count = 0;
 let timer;
 
-// 显示文字
-function showText() {
-  const container = document.getElementById('text-container');
-  const currentText = text[currentTextIndex];
-  container!.innerHTML += currentText.charAt(count);
-  count++;
-  if (count == currentText.length) {
-    clearInterval(timer);
-    setTimeout(deleteText, 3000);
-  }
-}
-
-// 删除文字
-function deleteText() {
-  timer = setInterval(function () {
+onMounted(() => {
+  // 显示文字
+  function showText() {
     const container = document.getElementById('text-container');
-    const length = container!.innerHTML.length;
-    container!.innerHTML = container!.innerHTML.slice(0, length - 1);
-    if (length == 0) {
+    const currentText = text[currentTextIndex];
+    container!.innerHTML += currentText.charAt(count);
+    count++;
+    if (count == currentText.length) {
       clearInterval(timer);
-      count = 0;
-      currentTextIndex = Math.floor(Math.random() * text.length);
-
-      setTimeout(() => {
-        timer = setInterval(showText, 100);
-      }, 1000);
+      setTimeout(deleteText, 3000);
     }
-  }, 100);
-}
+  }
 
-// 开始显示文字
-timer = setInterval(showText, 100);
+  // 删除文字
+  function deleteText() {
+    timer = setInterval(function () {
+      const container = document.getElementById('text-container');
+      const length = container!.innerHTML.length;
+      container!.innerHTML = container!.innerHTML.slice(0, length - 1);
+      if (length == 0) {
+        clearInterval(timer);
+        count = 0;
+        currentTextIndex = Math.floor(Math.random() * text.length);
+
+        setTimeout(() => {
+          timer = setInterval(showText, 100);
+        }, 1000);
+      }
+    }, 100);
+  }
+
+  // 开始显示文字
+  timer = setInterval(showText, 100);
+});
 </script>
 
 <template>
