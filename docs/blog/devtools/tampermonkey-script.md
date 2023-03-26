@@ -1,6 +1,6 @@
 # Tampermonkey Script
 
-## b 站直播间打卡助手
+## b 站打卡助手
 
 [查看源码](https://github.com/Jinyang79/tampermonkey-script/blob/main/bilibili-auto-clockin.js)
 

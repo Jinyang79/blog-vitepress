@@ -60,8 +60,8 @@ sudo pmset repeat cancel
 
 目前推荐使用的方案是“查找 + ToDesk”，实测使用几个月来没有出现任何问题，而且非常方便实用，只是偶尔因为网络波动原因，查找设备更新状态慢了点。
 
-> reference
->
+## 参考
+
 > https://support.apple.com/zh-cn/guide/mac-help/mchl40376151/13.0/mac/13.0
 >
 > https://www.makeuseof.com/how-to-schedule-startup-shutdown-restart-mac
