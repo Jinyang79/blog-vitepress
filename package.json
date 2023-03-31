@@ -1,18 +1,21 @@
 {
-  "name": "vitepress-docs",
+  "name": "jinyang-blog",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "Jinyang79 <827126732@qq.com>",
+  "author": "Jinyang79 <jinyang79@foxmail.com>",
   "type": "module",
   "license": "MIT",
-  "devDependencies": {
-    "vitepress": "^1.0.0-alpha.45"
-  },
   "scripts": {
-    "deploy": "bash deploy.sh",
-    "redeploy": "bash redeploy.sh",
     "dev": "vitepress dev docs",
     "build": "vitepress build docs",
-    "serve": "vitepress serve docs"
+    "serve": "vitepress serve docs",
+    "deploy": "bash deploy.sh",
+    "redeploy": "bash redeploy.sh"
+  },
+  "dependencies": {
+    "typed.js": "^2.0.14"
+  },
+  "devDependencies": {
+    "vitepress": "^1.0.0-alpha.64"
   }
 }
