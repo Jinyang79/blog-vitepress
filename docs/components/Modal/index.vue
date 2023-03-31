@@ -1,16 +1,20 @@
 <script setup lang="ts">
 import { ref } from 'vue';
+const { text } = defineProps(['text']);
 const showModal = ref(false);
 </script>
 
 <template>
-  <button class="modal-button" @click="showModal = true">Show Modal</button>
+  <a @click="showModal = true">{{ text }}</a>
 
   <Teleport to="body">
     <Transition name="modal">
       <div v-show="showModal" class="modal-mask">
         <div class="modal-container">
-          <p>Hello from the modal!</p>
+          <img
+            src="https://cdn.jsdelivr.net/gh/Jinyangava/blog-image@master/img/202208141742797.jpeg"
+            alt=""
+          />
           <div class="model-footer">
             <button class="modal-button" @click="showModal = false">
               Close
@@ -23,6 +27,16 @@ const showModal = ref(false);
 </template>
 
 <style scoped>
+a {
+  cursor: pointer;
+}
+
+img {
+  padding: 10px;
+  width: 240px;
+  height: 276px;
+}
+
 .modal-mask {
   position: fixed;
   z-index: 200;
