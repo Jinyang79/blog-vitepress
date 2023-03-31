@@ -1,8 +1,31 @@
 # Development Tools
+## search 🔍
 
-## code ✏️
+- [MDN](https://developer.mozilla.org/en-US/)
+- [Github](https://github.com/)
+- [Stack Overflow](https://stackoverflow.com/)
+- [Sourcegraph](https://sourcegraph.com/search)
+- [ChatGPT](https://chat.openai.com/chat)
 
-- 编辑器 Visual Studio Code
+## utils 🔨
+
+- [Whimsical](https://whimsical.com/h5-LV3atjtuWrq1BCuLhMZiyv)
+- [VPN](https://xn--4gq62f52gdss.com/#/dashboard)
+- [Speedtest](https://www.speedtest.net)
+- [CodeSandbox](https://codesandbox.io/)
+- [Ipinfo](https://ipinfo.io/)
+
+## blog 📔
+
+- [GitHub Pages](https://jinyang79.github.io/)(main)
+- [Typora](https://typora.io/)(local)
+- [语雀](https://www.yuque.com/dashboard)(cloud)
+- [掘金](https://juejin.cn/user/3685218709706807)(public)
+- [图床](https://github.com/Molunerfinn/PicGo) PicGo + GitHub
+
+## code 💻
+
+- Visual Studio Code
 - VSCode extensions
   ::: details 点击查看详情
 
@@ -27,13 +50,13 @@
   - vscode-icons
     :::
 
-- 浏览器 Chrome
 - Chrome extensions
   ::: details 点击查看详情
   - React Developer Tools
   - Redux DevTools
   - EditThisCookie
   - JSON-handle
+  - Tampermonkey
     :::
 - Prettier Config
 
@@ -65,27 +88,3 @@
   ```
 
   :::
-
-## search 🔍
-
-- [MDN](https://developer.mozilla.org/zh-CN/)
-- [Github](https://github.com/)
-- [Stack Overflow](https://stackoverflow.com/)
-- [Sourcegraph](https://sourcegraph.com/search)
-- [ChatGPT](https://chat.openai.com/chat)
-
-## utils 🔨
-
-- [Whimsical](https://whimsical.com/h5-LV3atjtuWrq1BCuLhMZiyv)
-- [VPN](https://xn--4gq62f52gdss.com/#/dashboard)
-- [Speedtest](https://www.speedtest.net)
-- [CodeSandbox](https://codesandbox.io/)
-- [Ipinfo](https://ipinfo.io/)
-
-## blog 💡
-
-- [GitHub Pages](https://jinyang79.github.io/)(main)
-- [Typora](https://typora.io/)(local)
-- [语雀](https://www.yuque.com/dashboard)(cloud)
-- [掘金](https://juejin.cn/user/3685218709706807)(public)
-- [图床](https://github.com/Molunerfinn/PicGo) PicGo + GitHub
